@@ -25,6 +25,11 @@ inquirer
         },
         {
             type: 'input',
+            message: 'Credits:',
+            name: 'credits',
+        },
+        {
+            type: 'input',
             message: 'Type of license?',
             name: 'license',
         },
@@ -51,8 +56,46 @@ inquirer
     ])
     .then((response) => {
 
-        const markDown = 
+        const markDown = `# ${title}
+        ## Description
+        
+        ${description}
 
+        ## Table of Contents 
+       
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [Credits](#credits)
+        - [License](#license)
+
+        ## Installation
+        
+        ${instalation}
+
+        ## Usage
+        
+        ${usage}
+            
+        ## Credits
+        
+        ${credits}
+
+        ## License
+        
+        ${license}
+        
+        ##Contribution Guidlines
+
+        ${contributions}
+        
+        ## Tests
+        
+        ${test}
+
+        ##Questions
+
+        I can be reached at ${email} for any questions reagarding this application.
+        Please visit ${github} for more information`
 
         createFile(markDown)
     });
