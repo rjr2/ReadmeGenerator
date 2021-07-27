@@ -60,7 +60,7 @@ inquirer
 
 function createFile(markDown) {
     fs.writeFile("README.md", markDown, (error, data) =>
-        error ? console.error(error) : console.log("Successful")
+        error ? console.error(error) : console.log("success")
     );
 
 }
