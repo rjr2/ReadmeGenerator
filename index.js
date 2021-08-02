@@ -58,8 +58,6 @@ inquirer
     ])
     .then((response) => {
 
-        console.log(response.license);
-
        const markDown = `
 # ${response.title}
 
@@ -104,7 +102,6 @@ I can be reached at ${response.email} for any questions reagarding this applicat
 Please visit ${response.github} for more information`
 
         createFile(markDown)
-        console.log(badges[response.license])
     });
 
 
