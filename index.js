@@ -56,46 +56,48 @@ inquirer
     ])
     .then((response) => {
 
-       const markDown = `#${response.title}
-        ##Description
-        
-        ${response.description}
+       const markDown = `
+#${response.title}
 
-        ##Table of Contents 
+##Description
+        
+${response.description}
+
+##Table of Contents 
        
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [Credits](#credits)
-        - [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-        ##Installation
+##Installation
         
-        ${response.install}
+${response.install}
 
-        ##Usage
+##Usage
         
-        ${response.usage}
+${response.usage}
             
-        ##Credits
+##Credits
         
-        ${response.credits}
+${response.credits}
 
-        ##License
+##License
         
-        ${response.license}
+${response.license}
         
-        ##Contribution Guidelines
+##Contribution Guidelines
 
-        ${response.contribution}
+${response.contribution}
         
-        ##Tests
+##Tests
         
-        ${response.test}
+${response.test}
 
-        ##Questions
+##Questions
 
-        I can be reached at ${response.email} for any questions reagarding this application.
-        Please visit ${response.github} for more information`
+I can be reached at ${response.email} for any questions reagarding this application.
+Please visit ${response.github} for more information`
 
         createFile(markDown)
     });
