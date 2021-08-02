@@ -109,7 +109,7 @@ Please visit ${response.github} for more information`
 
 
 function createFile(markDown) {
-    fs.writeFile("README.md", markDown, (error, data) =>
+    fs.writeFile("./generatedREADME/README.md", markDown, (error, data) =>
         error ? console.error(error) : console.log("README Generated!")
     );
 
