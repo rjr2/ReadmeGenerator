@@ -1,3 +1,5 @@
+const badges = require('./badge.js')
+
 const fs = require('fs');
 const inquirer = require('inquirer');
 
@@ -56,50 +58,53 @@ inquirer
     ])
     .then((response) => {
 
-       const markDown = `
-#${response.title}
+        console.log(response.license);
 
-##Description
+       const markDown = `
+# ${response.title}
+
+## Description
         
 ${response.description}
 
-##Table of Contents 
+## Table of Contents 
        
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 
-##Installation
+## Installation
         
 ${response.install}
 
-##Usage
+## Usage
         
 ${response.usage}
             
-##Credits
+## Credits
         
 ${response.credits}
 
-##License
+## License
         
-${response.license}
+${badges[response.license.toUpperCase()] || response.license}
         
-##Contribution Guidelines
+## Contribution Guidelines
 
 ${response.contribution}
         
-##Tests
+## Tests
         
 ${response.test}
 
-##Questions
+## Questions
 
 I can be reached at ${response.email} for any questions reagarding this application.
 Please visit ${response.github} for more information`
 
         createFile(markDown)
+        console.log(badges[response.license])
     });
 
 
