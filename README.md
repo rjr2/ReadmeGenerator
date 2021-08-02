@@ -16,6 +16,8 @@ A command line application that creates custom READMEs.
         
 Requires node install. for instructions please visit nodejs.org. Step 1: Open command line in readmegenerator.js directory. Step 2: type "npm init -y" and press enter to create package.json. Step 3: type "npm install inquirer" and press enter to install inquirer and create package-lock.json. Step 4: enjoy your new generator.
 
+[A quick YouTube quide](https://youtu.be/J0to4MM_NyQ)
+
 ## Usage
         
 Feel free to do whatever you want.
