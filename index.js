@@ -56,46 +56,46 @@ inquirer
     ])
     .then((response) => {
 
-        const markDown = `# ${title}
-        ## Description
+       const markDown = `#${response.title}
+        ##Description
         
-        ${description}
+        ${response.description}
 
-        ## Table of Contents 
+        ##Table of Contents 
        
         - [Installation](#installation)
         - [Usage](#usage)
         - [Credits](#credits)
         - [License](#license)
 
-        ## Installation
+        ##Installation
         
-        ${instalation}
+        ${response.install}
 
-        ## Usage
+        ##Usage
         
-        ${usage}
+        ${response.usage}
             
-        ## Credits
+        ##Credits
         
-        ${credits}
+        ${response.credits}
 
-        ## License
+        ##License
         
-        ${license}
+        ${response.license}
         
-        ##Contribution Guidlines
+        ##Contribution Guidelines
 
-        ${contributions}
+        ${response.contribution}
         
-        ## Tests
+        ##Tests
         
-        ${test}
+        ${response.test}
 
         ##Questions
 
-        I can be reached at ${email} for any questions reagarding this application.
-        Please visit ${github} for more information`
+        I can be reached at ${response.email} for any questions reagarding this application.
+        Please visit ${response.github} for more information`
 
         createFile(markDown)
     });
@@ -103,7 +103,7 @@ inquirer
 
 function createFile(markDown) {
     fs.writeFile("README.md", markDown, (error, data) =>
-        error ? console.error(error) : console.log("success")
+        error ? console.error(error) : console.log("README Generated!")
     );
 
 }
